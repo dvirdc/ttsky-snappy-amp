@@ -6,7 +6,7 @@ MACRO tt_um_dvirdc_snappy_amp
   CLASS BLOCK ;
   FOREIGN tt_um_dvirdc_snappy_amp ;
   ORIGIN 0.000 0.000 ;
-  SIZE 152.560 BY 217.075 ;
+  SIZE 161.000 BY 225.760 ;
   PIN VDPWR
     DIRECTION INOUT ;
     USE POWER ;
