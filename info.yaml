@@ -1,28 +1,26 @@
 # Tiny Tapeout project information
 project:
-  title:        ""      # Project title
-  author:       ""      # Your name
-  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  ""      # One line description of what your project does
-  language:     "Analog" # other examples include Verilog, Amaranth, VHDL, etc
-  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+  title:        "Snappy CS Amplifier"
+  author:       "dvirdc"
+  discord:      ""
+  description:  "Common-source NMOS amplifier whose input coupling capacitor is laid out as the Snappy logo (a 195-tile MiM cap)."
+  language:     "Analog"
+  clock_hz:     0
 
-  # How many tiles your design occupies? A single tile is about 167x108 uM.
-  tiles: "1x2"          # Valid values for analog projects: 1x2, 2x2
+  # A single tile is about 167x108 uM. Valid analog values: 1x2, 2x2
+  tiles: "1x2"
 
-  # How many analog pins does your project use?
-  analog_pins: 2        # Valid values: 0 to 6
-  uses_vapwr: false       # Set to true if your project uses second analog power supply (VAPWR) in addition to 1.8V (VDPWR)
+  # Analog pins used (0 to 6)
+  analog_pins: 2
+  uses_vapwr:  false   # no second analog supply (3.3V VAPWR)
 
-  # Your top module name must start with "tt_um_". Make it unique by including your github username:
-  top_module:  "tt_um_example"
+  # Top module must start with tt_um_ and be unique (github username included)
+  top_module:  "tt_um_dvirdc_snappy_amp"
 
-  # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
-  source_files:        
+  source_files:
     - "project.v"
 
-# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
-# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+# Pinout - leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
   ui[0]: ""
@@ -54,9 +52,9 @@ pinout:
   uio[6]: ""
   uio[7]: ""
 
-  # Analog pins - make sure to also set "analog_pins" above, else the pins won't be connected
-  ua[0]: ""
-  ua[1]: ""
+  # Analog pins
+  ua[0]: "vin - amplifier input (AC-coupled through the Snappy cap)"
+  ua[1]: "vout - amplifier output"
   ua[2]: ""
   ua[3]: ""
   ua[4]: ""
